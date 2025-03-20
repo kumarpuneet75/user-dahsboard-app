@@ -1,0 +1,45 @@
+::ng-deep .mat-dialog-container{
+    width: 100%;
+    padding: 48px !important;  
+}
+::ng-deep .mat-select-arrow { opacity: 0; }
+:host ::ng-deep .mat-select-arrow-wrapper {
+    background-image: url('../../../assets/select-down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 16px;
+    width: 16px;
+  }
+::ng-deep .mat-select-trigger{
+    margin-top: 9px;
+    font-size: 16px;
+}
+.user{
+    &-form{
+        padding: 16px;
+        width: 100%;
+    }
+    &-field{
+        margin-bottom: 16px;
+    }
+    &-label{
+        font-size: 16px;
+        color: black;
+        margin-bottom: 8px;
+        padding: 0px;
+    }
+    &-err-msg{
+        padding: 0px;
+        color: red;
+        font-size: 14px;
+    }
+    &-input{
+        border: 1.5px solid black;
+        height: 40px;
+        border-radius: 4px;
+    }
+    &-btn{
+        width: 100%;
+        margin-top: 16px;
+    }
+}

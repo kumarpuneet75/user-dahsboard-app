@@ -1,0 +1,25 @@
+<div class="user-form">
+    <h3>User Registration Form</h3>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="row user-field">
+        <label class="user-label">Name</label>
+        <input class="user-input"  type="text" name="name" formControlName="name" placeholder="Name">
+        <div class="user-err-msg" *ngIf="(submitted ||  f.get('name')?.touched || f.get('name')?.dirty) && f.get('name')?.invalid">Please enter a valid name</div>
+    </div>
+    <div class="row  user-field">
+        <label class="user-label">Email</label>
+        <input class="user-input" type="email" name="email" formControlName="email">
+        <div class="user-err-msg" *ngIf="(submitted ||  f.get('email')?.touched || f.get('email')?.dirty) && f.get('email')?.invalid">Please enter a valid email</div>
+    </div>
+    <div class="row  user-field">
+        <label class="user-label">Role</label>
+        <mat-select disableOptionCentering  class="user-input" name="role" formControlName="role">
+            <mat-option value="Admin">Admin</mat-option>
+            <mat-option value="Editor">Editor</mat-option>
+            <mat-option value="Viewer">Viewer</mat-option>
+        </mat-select>
+        <div class="user-err-msg" *ngIf="(submitted ||  f.get('role')?.touched || f.get('role')?.dirty) && f.get('role')?.invalid">Please select a valid role</div>
+    </div>
+    <button type="submit" class="btn btn-danger btn-block user-btn" id="userRegistration">Submit</button>
+    </form>
+</div>
