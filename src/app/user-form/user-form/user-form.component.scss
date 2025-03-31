@@ -1,6 +1,18 @@
 ::ng-deep .mat-dialog-container{
     width: 100%;
     padding: 48px !important;  
+    position: relative;
+    width: 450px;
+}
+.close-button{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    border: none;
+}
+.close-button span{
+    font-size: 24px;
 }
 ::ng-deep .mat-select-arrow { opacity: 0; }
 :host ::ng-deep .mat-select-arrow-wrapper {

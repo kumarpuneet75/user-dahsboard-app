@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row user-dashboard-container">
         <div class="col">
         <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -20,6 +20,10 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+        </mat-paginator>
           </div>
           <div class="col">
           <div class="chart-container">
@@ -27,7 +31,9 @@
         </div>
         </div>
     </div>
-    <button type="button" (click)="openModal()" class="btn btn-primary">Button</button>
+    <div class="add-user-btn-container">
+    <button type="button" (click)="openModal()" class="btn btn-primary add-user-btn">Add User</button>
+  </div>
 </div>
 
 

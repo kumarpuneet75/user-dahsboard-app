@@ -1,5 +1,8 @@
 <div class="user-form">
+    <button #closeModal type="button" class="close-button" aria-label="Close" (click)="closePopUp()"><span aria-hidden="true">&times;</span></button>
     <h3>User Registration Form</h3>
+   
+
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div class="row user-field">
         <label class="user-label">Name</label>
